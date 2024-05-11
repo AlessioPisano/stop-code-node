@@ -41,7 +41,7 @@ const lastMod = (entityPath: string) => {
     const lastModifiedTime = DateTime.fromJSDate(stats.mtime); 
     const now = DateTime.now(); 
     
-    const diff = now.diff(lastModifiedTime, ['years', 'months', 'days', 'hours', 'minutes', 'seconds']).toObject();hb 
+    const diff = now.diff(lastModifiedTime, ['years', 'months', 'days', 'hours', 'minutes', 'seconds']).toObject();
     
     let formattedDiff = '';
     if (diff.years) formattedDiff += `${diff.years} anni `;
