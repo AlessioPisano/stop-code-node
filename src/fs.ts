@@ -4,8 +4,6 @@ import chalk from "chalk";
 import {DateTime} from "luxon";
 
 export default() => {
-    
-
     const workDir = process.cwd();
     const dataDir = "data";
     const dataFull = path.join(workDir, dataDir);
@@ -42,10 +40,8 @@ const lastMod = (entityPath: string) => {
     const stats = fs.statSync(entityPath); 
     const lastModifiedTime = DateTime.fromJSDate(stats.mtime); 
     const now = DateTime.now(); 
-
     
-    const diff = now.diff(lastModifiedTime, ['years', 'months', 'days', 'hours', 'minutes', 'seconds']).toObject();
-
+    const diff = now.diff(lastModifiedTime, ['years', 'months', 'days', 'hours', 'minutes', 'seconds']).toObject();hb 
     
     let formattedDiff = '';
     if (diff.years) formattedDiff += `${diff.years} anni `;
