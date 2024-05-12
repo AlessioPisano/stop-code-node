@@ -50,6 +50,6 @@ const lastMod = (entityPath: string) => {
     if (diff.hours) formattedDiff += `${diff.hours} ore `;
     if (diff.minutes) formattedDiff += `${diff.minutes} minuti `;
 
-    return formattedDiff.trim() || 'just now';
+    return formattedDiff.trim() || 'adesso';
 };
  
